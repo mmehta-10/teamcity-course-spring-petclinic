@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="0dfb873b-8d58-4839-aab1-9de87d66e536" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2020.1/project-config.xsd">
+  <name>Teamcity Course Spring Petclinic</name>
+  <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_2" type="buildtype-graphs">
+      <parameters>
+        <param name="format" value="text" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "Build Checkout Time",
+    "key": "buildStageDuration:sourcesUpdate"
+  },
+  {
+    "type": "valueType",
+    "title": "BuildTestStatus",
+    "key": "BuildTestStatus"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="New chart title" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_3" type="project-graphs">
+      <parameters>
+        <param name="defaultFilters" value="" />
+        <param name="format" value="integer" />
+        <param name="hideFilters" value="" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "Time Spent in Queue",
+    "sourceBuildTypeId": "TeamcityCourseSpringPetclinic_Build",
+    "key": "TimeSpentInQueue"
+  },
+  {
+    "type": "valueType",
+    "title": "Artifacts Size",
+    "sourceBuildTypeId": "TeamcityCourseSpringPetclinic_Build",
+    "key": "VisibleArtifactsSize"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="New chart title" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_4" type="versionedSettings">
+      <parameters>
+        <param name="buildSettings" value="ALWAYS_USE_CURRENT" />
+        <param name="credentialsStorageType" value="credentialsJSON" />
+        <param name="enabled" value="true" />
+        <param name="rootId" value="TeamcityCourseSpringPetclinic_HttpsGithubComMmehta10teamcityCourseSpringPetclinicGitRefsHeadsMaster" />
+        <param name="showChanges" value="false" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+
